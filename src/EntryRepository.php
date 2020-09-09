@@ -6,6 +6,7 @@ use Statamic\Contracts\Entries\Entry as EntryContract;
 use Statamic\Eloquent\Entries\EntryModel as Model;
 use Statamic\Entries\EntryCollection;
 use Statamic\Stache\Repositories\EntryRepository as StacheRepository;
+use Statamic\Support\Str;
 
 class EntryRepository extends StacheRepository
 {
@@ -39,9 +40,14 @@ class EntryRepository extends StacheRepository
     {
         $model = $entry->toModel();
 
+        if (! $entry->id()) {
+            $model->id = (string) Str::uuid();
+        }
+
         $model->save();
 
         $entry->model($model);
+        $entry->id($model->id);
     }
 
     public function make(): EntryContract
