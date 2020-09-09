@@ -1,0 +1,23 @@
+{
+    "name": "statamic/eloquent-entries",
+    "description": "Allows you to store Statamic entries in a database.",
+    "autoload": {
+        "psr-4": {
+            "Statamic\\Eloquent\\Entries\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Eloquent Entries",
+            "description": "Allows you to store Statamic entries in a database."
+        },
+        "laravel": {
+            "providers": [
+                "Statamic\\Eloquent\\Entries\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "statamic/cms": "^3.0"
+    }
+}
