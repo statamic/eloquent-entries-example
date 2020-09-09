@@ -30,10 +30,12 @@ class Entry extends FileEntry
             'origin_id' => $this->originId(),
             'site' => $this->locale(),
             'slug' => $this->slug(),
+            'uri' => $this->uri(),
             'date' => $this->hasDate() ? $this->date() : null,
             'collection' => $this->collectionHandle(),
             'data' => $this->data(),
             'published' => $this->published(),
+            'status' => $this->status(),
         ]);
     }
 
