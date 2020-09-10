@@ -27,8 +27,7 @@ class EntryRepository extends StacheRepository
 
         $model->save();
 
-        $entry->model($model);
-        $entry->id($model->id);
+        $entry->model($model->fresh());
     }
 
     public function delete($entry)
