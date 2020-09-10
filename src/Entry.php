@@ -4,7 +4,6 @@ namespace Statamic\Eloquent\Entries;
 
 use Statamic\Eloquent\Entries\EntryModel as Model;
 use Statamic\Entries\Entry as FileEntry;
-use Statamic\Facades;
 
 class Entry extends FileEntry
 {
@@ -84,17 +83,5 @@ class Entry extends FileEntry
     public function hasOrigin()
     {
         return $this->originId() !== null;
-    }
-
-    public function in($site = null)
-    {
-        if ($site === $this->locale()) {
-            return $this;
-        }
-
-        return Facades\Entry::query()
-            ->where('origin_id', $this->id())
-            ->where('site', $site)
-            ->first();
     }
 }

@@ -25,6 +25,10 @@ class EntryQueryBuilder extends EloquentQueryBuilder implements QueryBuilder
 
     protected function column($column)
     {
+        if ($column == 'origin') {
+            $column = 'origin_id';
+        }
+
         if (! in_array($column, $this->columns)) {
             $column = 'data->'.$column;
         }
