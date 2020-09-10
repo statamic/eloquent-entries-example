@@ -3,7 +3,7 @@
 namespace Statamic\Eloquent\Entries;
 
 use Statamic\Contracts\Entries\Entry as EntryContract;
-use Statamic\Eloquent\Entries\EntryModel as Model;
+use Statamic\Contracts\Entries\QueryBuilder;
 use Statamic\Stache\Repositories\EntryRepository as StacheRepository;
 use Statamic\Support\Str;
 
@@ -13,12 +13,8 @@ class EntryRepository extends StacheRepository
     {
         return [
             EntryContract::class => Entry::class,
+            QueryBuilder::class => EntryQueryBuilder::class,
         ];
-    }
-
-    public function query()
-    {
-        return new EntryQueryBuilder(Model::query());
     }
 
     public function save($entry)

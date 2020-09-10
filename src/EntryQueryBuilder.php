@@ -2,11 +2,12 @@
 
 namespace Statamic\Eloquent\Entries;
 
+use Statamic\Contracts\Entries\QueryBuilder;
 use Statamic\Entries\EntryCollection;
 use Statamic\Query\EloquentQueryBuilder;
 use Statamic\Stache\Query\QueriesTaxonomizedEntries;
 
-class EntryQueryBuilder extends EloquentQueryBuilder
+class EntryQueryBuilder extends EloquentQueryBuilder implements QueryBuilder
 {
     use QueriesTaxonomizedEntries;
 
