@@ -5,7 +5,6 @@ namespace Statamic\Eloquent\Entries;
 use Statamic\Contracts\Entries\Entry as EntryContract;
 use Statamic\Contracts\Entries\QueryBuilder;
 use Statamic\Stache\Repositories\EntryRepository as StacheRepository;
-use Statamic\Support\Str;
 
 class EntryRepository extends StacheRepository
 {
@@ -20,10 +19,6 @@ class EntryRepository extends StacheRepository
     public function save($entry)
     {
         $model = $entry->toModel();
-
-        if (! $entry->id()) {
-            $model->id = (string) Str::uuid();
-        }
 
         $model->save();
 

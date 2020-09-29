@@ -4,6 +4,7 @@ namespace Statamic\Eloquent\Entries;
 
 use Statamic\Eloquent\Entries\EntryModel as Model;
 use Statamic\Entries\Entry as FileEntry;
+use Statamic\Support\Str;
 
 class Entry extends FileEntry
 {
@@ -24,7 +25,7 @@ class Entry extends FileEntry
     public function toModel()
     {
         return Model::findOrNew($this->id())->fill([
-            'id' => $this->id(),
+            'id' => $this->id() ?? (string) Str::uuid(),
             'origin_id' => $this->originId(),
             'site' => $this->locale(),
             'slug' => $this->slug(),
