@@ -4,6 +4,8 @@ This package allows you to store your Statamic v3 entries in a database.
 
 At the moment, this mostly serves as an example or jumping-off point for building your own [entry repository](https://statamic.dev/extending/repositories).
 
+[This package is built as a walkthrough on the Statamic Knowledge Base](https://statamic.dev/knowledge-base/storing-entries-in-a-database).
+
 ## Installation
 
 ```
