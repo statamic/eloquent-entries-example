@@ -1,6 +1,6 @@
 {
-    "name": "statamic/eloquent-entries",
-    "description": "Allows you to store Statamic entries in a database.",
+    "name": "statamic/eloquent-entries-example",
+    "description": "An example package that allows you to store Statamic entries in a database.",
     "autoload": {
         "psr-4": {
             "Statamic\\Eloquent\\Entries\\": "src"
@@ -8,8 +8,8 @@
     },
     "extra": {
         "statamic": {
-            "name": "Eloquent Entries",
-            "description": "Allows you to store Statamic entries in a database."
+            "name": "Eloquent Entries Example",
+            "description": "An example package that allows you to store Statamic entries in a database."
         },
         "laravel": {
             "providers": [
