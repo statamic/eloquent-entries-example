@@ -1,17 +1,25 @@
-# Statamic Eloquent Entries
+# Statamic Eloquent Entries Example
 
-This package allows you to store your Statamic v3 entries in a database.
+> ⚠️ This repository is intended to be a learning tool, and not used in production.
 
-At the moment, this mostly serves as an example or jumping-off point for building your own [entry repository](https://statamic.dev/extending/repositories).
+[This is built in a walkthrough on the Statamic Knowledge Base](https://statamic.dev/knowledge-base/storing-entries-in-a-database).
 
-[This package is built as a walkthrough on the Statamic Knowledge Base](https://statamic.dev/knowledge-base/storing-entries-in-a-database).
+A package intended for real usage exists at [statamic/eloquent-driver](https://github.com/statamic/eloquent-driver).
 
 ## Installation
 
-```
-composer require statamic/eloquent-entries
-php artisan migrate
-```
+- Clone or download this repository.
+- Add a repository in your project's `composer.json` pointing to where you cloned it:
+    ``` json
+    "repositories": [
+        {
+            "type": "path",
+            "url": "path/to/repo"
+        }
+    ]
+    ```
+- Require it with `composer require statamic/eloquent-entries-example`
+- Run migrations with `php artisan migrate`
 
 ## Schema
 
