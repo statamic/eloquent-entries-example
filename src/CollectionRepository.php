@@ -6,7 +6,7 @@ use Statamic\Stache\Repositories\CollectionRepository as StacheRepository;
 
 class CollectionRepository extends StacheRepository
 {
-    public function updateEntryUris($collection)
+    public function updateEntryUris($collection, $ids = null)
     {
         $collection
             ->queryEntries()
